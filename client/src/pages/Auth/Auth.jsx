@@ -36,7 +36,7 @@ const Auth = () => {
     <section className="auth-section">
         {issignup && <Aboutauth/>}
         <div className="auth-container-2">
-            <img src={icon} className='login-logo' alt="" />
+            <img src={" "} className='login-logo' alt="logo" />
             <form onSubmit={handlesubmit}>
                 {issignup && (
                     <label htmlFor="name">

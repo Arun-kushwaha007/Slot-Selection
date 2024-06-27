@@ -1,0 +1,58 @@
+.profile-bio-container {
+    display: flex;
+    justify-content: space-between;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.tags-watched {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.about-section {
+    flex: 2;
+}
+
+h4 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.tag-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.tag {
+    background-color: #f0f0f0;
+    color: #333;
+    font-size: 14px;
+    padding: 6px 12px;
+    margin-right: 8px;
+    margin-bottom: 8px;
+    border-radius: 16px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.tag:hover {
+    background-color: #009dff;
+    color: white;
+}
+
+p {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #666;
+    margin: 0;
+}
+
+p.no-tags,
+p.no-bio {
+    color: #999;
+    font-style: italic;
+}

@@ -18,7 +18,7 @@ function Navbar({handleSlideIn}) {
             </button>
             <div className="navbar-1">
                 <Link to='/' className='nav-item nav-logo'>
-                    <img src={logo} alt="logo" />
+                    <img src={" "} alt="logo" />
                 </Link>
                 <Link to='/' className='nav-item nav-btn res-nav'>About</Link>
                 <Link to='/' className='nav-item nav-btn res-nav'>Products</Link>
@@ -30,7 +30,7 @@ function Navbar({handleSlideIn}) {
             </div>
             <div className="navbar-2">
                 { User=== null ?(
-                    <Link to='/Auth' className='nav-item nav-links'>
+                    <Link to='/Auth' className='nav-item-2 nav-links'>
                         Log in
                     </Link>
                 ): (
