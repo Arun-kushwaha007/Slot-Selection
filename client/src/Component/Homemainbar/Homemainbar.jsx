@@ -7,7 +7,16 @@ import Questionlist from './Questionlist';
 function Homemainbar() {
     const user = 1;
     const location = useLocation();
-    const questionlist = null
+    const navigate = useNavigate();
+    const questionlist = null;
+    const checkauth = ()=>{
+        if(user === null){
+            alert("Login or Signup to ask questions");
+            navigate("/Auth")
+        }else{
+            navigate("/Askquestion")
+        }
+    }
   return (
     <div className="main-bar">
         <div className="main-bar-header">
@@ -18,7 +27,7 @@ function Homemainbar() {
                 <h1>All Questions</h1>
 
             )}
-            <button className="ask-btn">Ask Questions</button>
+            <button className="ask-btn" onClick={checkauth}>Ask Questions</button>
         </div>
         <div>
             {

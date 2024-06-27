@@ -26,7 +26,7 @@ const Leftsidebar = ({slideIn}) => {
                     
                 </div>
                 <button className="nav-btnn">
-                <NavLink to='/Questions' className="side-nav-links" activeclassname='active'>
+                <NavLink to='/Question' className="side-nav-links" activeclassname='active'>
                     <img src={Globe} alt="" />
                     <p style={{paddingLeft:'10px'}}>Questions</p>
                 </NavLink>
