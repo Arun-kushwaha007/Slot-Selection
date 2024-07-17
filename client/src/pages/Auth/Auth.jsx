@@ -20,10 +20,12 @@ const Auth = () => {
     e.preventDefault();
     if (!email && !password) {
       alert("Enter email and password");
+      return;
     }
     if (issignup) {
       if (!name) {
         alert("Enter a name to continue");
+        return;
       }
       dispatch(signup({ name, email, password }, navigate));
     } else {

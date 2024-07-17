@@ -19,7 +19,8 @@ root.render(
       <React.StrictMode>
         <App />
       </React.StrictMode>
-    </GoogleOAuthProvider>
+    </GoogleOAuthProvider>,
+    document.getElementById('root')
   </Provider>
 );
 

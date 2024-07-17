@@ -24,14 +24,3 @@ export const login = (authdata, navigate) => async (dispatch) => {
     console.log(error);
   }
 };
-
-export const googleLogin = (token, navigate) => async (dispatch) => {
-  try {
-    const { data } = await api.login({ googleToken: token });
-    dispatch({ type: "AUTH", data });
-    dispatch(setcurrentuser(JSON.parse(localStorage.getItem("Profile"))));
-    navigate("/");
-  } catch (error) {
-    console.log(error);
-  }
-};
