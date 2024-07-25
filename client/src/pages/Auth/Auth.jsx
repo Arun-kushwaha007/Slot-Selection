@@ -6,7 +6,7 @@ import icon from '../../Assets/icon.png';
 import Aboutauth from './Aboutauth';
 import { signup, login } from '../../actions/auth';
 
-import GoogleLoginButton from '../../Component/GoogleAuth/GoogleLoginButton';
+// import GoogleLoginButton from '../../Component/GoogleAuth/GoogleLoginButton';
 
 const Auth = () => {
   const [issignup, setissignup] = useState(false);
@@ -79,7 +79,7 @@ const Auth = () => {
             />
           </label>
           <button type='submit' className='auth-btn'>{issignup ? 'Sign up' : 'Log in'}</button>
-          <GoogleLoginButton />
+          {/* <GoogleLoginButton /> */}
         </form>
         <p>
           {issignup ? 'Already have an account?' : "Don't have an account"}
