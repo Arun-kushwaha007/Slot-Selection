@@ -2,7 +2,7 @@ import React from "react";
 import { GoogleOAuthProvider, GoogleLogin } from "@react-oauth/google";
 import { useDispatch } from "react-redux";
 import { useNavigate } from 'react-router-dom';
-import { login } from "../../actions/auth";
+// import { login } from "../../actions/auth";
 import './GoogleLoginButton.css';
 
 const GoogleLoginButton = () => {

@@ -10,7 +10,7 @@ API.interceptors.request.use((req) => {
   return req;
 });
 
-export const login = (authdata) => API.post("user/login", authdata);
+// export const login = (authdata) => API.post("user/login", authdata);
 export const signup = (authdata) => API.post("user/signup", authdata);
 export const getallusers = () => API.get("/user/getallusers");
 

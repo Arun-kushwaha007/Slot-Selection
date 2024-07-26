@@ -90,6 +90,26 @@ function Navbar({ handleslidein }) {
                 <div className="navbar-2">
                     {User === null && Mentor === null ? (
                         <div className='dropdown'>
+                            <button className="dropbtn " onClick={() => setIsOpen(!isOpen)}><Link to='/AuthMentor' onClick={closeDropdown} >Be a Mentor</Link></button>
+                            <div className={`dropdown-content ${isOpen ? 'show' : ''}`}>
+                                {/* <Link to='/Auth' onClick={closeDropdown}>As Student</Link> */}
+                                
+                            </div>
+                        </div>
+                    ) : (
+                        <>
+                            <Avatar backgroundColor='#009dff' px='10px' py='7px' borderRadius='50%' color="white">
+                                <Link to={Mentor ? `/Mentor/${Mentor?.result?._id}` : `/Users/${User?.result?._id}`} style={{ color: "white", textDecoration: "none" }}>
+                                    {(Mentor || User)?.result?.name?.charAt(0).toUpperCase()}
+                                </Link>
+                            </Avatar>
+                            <button className="nav-item nav-links" onClick={handleLogout}>Log out</button>
+                        </>
+                    )}
+                </div>
+                {/* <div className="navbar-2">
+                    {User === null && Mentor === null ? (
+                        <div className='dropdown'>
                             <button className="dropbtn" onClick={() => setIsOpen(!isOpen)}>Login</button>
                             <div className={`dropdown-content ${isOpen ? 'show' : ''}`}>
                                 <Link to='/Auth' onClick={closeDropdown}>As Student</Link>
@@ -106,7 +126,7 @@ function Navbar({ handleslidein }) {
                             <button className="nav-item nav-links" onClick={handleLogout}>Log out</button>
                         </>
                     )}
-                </div>
+                </div> */}
             </div>
         </nav>
     );

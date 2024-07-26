@@ -1,16 +1,17 @@
-import React from 'react'
-import { Routes,Route } from 'react-router-dom'
-import Home from './pages/Home/Home'
-import AddBatch from './pages/Addbatch/Addbatch'
-import Auth from './pages/Auth/Auth'
-import AuthMentor from './pages/Auth/AuthMentor'
-import Batch from './pages/Batches/Batch'
-import Displaybatch from './pages/Batches/DisplayBatches'
-import Tags from './pages/Tags/Tags'
-import Users from './pages/Users/Users'
-import Userprofile from './pages/Userprofile/Userprofile'
-import Mentors from './pages/Users/Mentors'
-function Allroutes({slidein,handleslidein}) {
+import React from 'react';
+import { Routes, Route } from 'react-router-dom';
+import Home from './pages/Home/Home';
+import AddBatch from './pages/Addbatch/Addbatch';
+import Auth from './pages/Auth/Auth';
+import AuthMentor from './pages/Auth/AuthMentor';
+import Batch from './pages/Batches/Batch';
+import Displaybatch from './pages/Batches/DisplayBatches';
+import Tags from './pages/Tags/Tags';
+import Users from './pages/Users/Users';
+import Userprofile from './pages/Userprofile/Userprofile';
+import Mentors from './pages/Users/Mentors';
+
+function Allroutes({ slidein, handleslidein }) {
   return (
     <Routes>
         <Route path='/' element={<Home slidein={slidein} handleslidein={handleslidein}/>}/>
@@ -27,7 +28,7 @@ function Allroutes({slidein,handleslidein}) {
 
         <Route path='/Users/:id' element={<Userprofile slidein={slidein} handleslidein={handleslidein}/>}/>
     </Routes>
-  )
+  );
 }
 
-export default Allroutes
+export default Allroutes;
