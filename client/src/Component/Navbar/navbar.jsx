@@ -90,11 +90,11 @@ function Navbar({ handleslidein }) {
                 <div className="navbar-2">
                     {User === null && Mentor === null ? (
                         <div className='dropdown'>
-                            <button className="dropbtn " onClick={() => setIsOpen(!isOpen)}><Link to='/AuthMentor' onClick={closeDropdown} >Be a Mentor</Link></button>
-                            <div className={`dropdown-content ${isOpen ? 'show' : ''}`}>
+                            <button className="dropbtn" ><Link to='/AuthMentor' className='mentor-text' >Be a Mentor</Link></button>
+                            {/* <div className={`dropdown-content ${isOpen ? 'show' : ''}`}> */}
                                 {/* <Link to='/Auth' onClick={closeDropdown}>As Student</Link> */}
                                 
-                            </div>
+                            {/* </div> */}
                         </div>
                     ) : (
                         <>

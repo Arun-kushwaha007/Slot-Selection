@@ -10,6 +10,7 @@ import Tags from './pages/Tags/Tags';
 import Users from './pages/Users/Users';
 import Userprofile from './pages/Userprofile/Userprofile';
 import Mentors from './pages/Users/Mentors';
+import Payment from './pages/Payment/Payment';
 
 function Allroutes({ slidein, handleslidein }) {
   return (
@@ -27,6 +28,7 @@ function Allroutes({ slidein, handleslidein }) {
         <Route path='/Mentors' element={<Mentors slidein={slidein} handleslidein={handleslidein}/>}/>
 
         <Route path='/Users/:id' element={<Userprofile slidein={slidein} handleslidein={handleslidein}/>}/>
+        <Route path='/payment' element={<Payment />}/>
     </Routes>
   );
 }

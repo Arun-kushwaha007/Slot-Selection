@@ -28,7 +28,8 @@ const Auth = () => {
       alert("Enter a phone number to continue");
       return;
     }
-    dispatch(signup({ name, email, phone }, navigate));
+    dispatch(signup({ name, email, phone }));
+    navigate("/payment");
   };
 
   return (
@@ -38,7 +39,7 @@ const Auth = () => {
         <img src={icon} alt="icon" className='login-logo' />
         <form onSubmit={handlesubmit}>
           <label htmlFor="name">
-            <h4>Display name</h4>
+            <h4>Full name</h4>
             <input
               type="text"
               id='name'
@@ -64,7 +65,7 @@ const Auth = () => {
               onChange={(e) => { setphone(e.target.value) }}
             />
           </label>
-          <button type='submit' className='auth-btn'>Sign up</button>
+          <button type='submit' className='auth-btn'>Proceed</button>
         </form>
       </div>
     </section>
