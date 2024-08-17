@@ -68,10 +68,13 @@ function Navbar({ handleslidein }) {
                         Home
                     </NavLink>
                     <NavLink to="/Batch" className="nav-item nav-btn res-nav" activeClassName="active">
-                        Batches
+                        Booking
                     </NavLink>
                     <NavLink to="/Mentors" className="nav-item nav-btn res-nav" activeClassName="active">
-                        Mentors
+                        Resources
+                    </NavLink>
+                    <NavLink to="/Mentors" className="nav-item nav-btn res-nav" activeClassName="active">
+                        Contact Us
                     </NavLink>
                     {/* <GoogleLoginButton /> */}
                     {/* <GoogleLogin
