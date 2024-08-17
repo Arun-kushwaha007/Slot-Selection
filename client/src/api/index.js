@@ -2,13 +2,15 @@ import axios from "axios";
 
 const API = axios.create({ baseURL: "http://localhost:5000" });
 
+
 API.interceptors.request.use((req) => {
-  const profile = localStorage.getItem("Profile") || localStorage.getItem("ProfileMentor");
+  const profile = localStorage.getItem('Profile') || localStorage.getItem('ProfileMentor');
   if (profile) {
-    req.headers.Authorization = `Bearer ${JSON.parse(profile).token}`;
+      req.headers.Authorization = `Bearer ${JSON.parse(profile).token}`;
   }
   return req;
 });
+
 
 // export const login = (authdata) => API.post("user/login", authdata);
 export const signup = (authdata) => API.post("user/signup", authdata);
@@ -19,6 +21,7 @@ export const mentorlogin = (authData) => API.post('/mentor/mentorlogin', authDat
 export const getallmentor = () => API.get("/mentor/getallmentor");
 
 export const updateprofile = (id, updatedata) => API.patch(`user/update/${id}`, updatedata);
+export const joinBatch = (id, joinData) => API.patch(`/batches/${id}/join`, joinData);
 
 export const postbatch = (batchdata) => API.post("/batches/Add", batchdata);
 export const getallbatch = () => API.get("/batches/get");

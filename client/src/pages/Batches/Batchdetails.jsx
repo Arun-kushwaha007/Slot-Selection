@@ -8,7 +8,7 @@ import Avatar from "../../Component/Avatar/Avatar";
 import BatchJoin from "./BatchJoin";
 import { useSelector, useDispatch } from "react-redux";
 import { Link, useNavigate, useLocation, useParams } from "react-router-dom";
-import { deletebatch, votebatch, postjoin } from "../../actions/batch";
+import { deletebatch, votebatch } from "../../actions/batch";
 
 const Batchdetails = () => {
   const [termsChecked, setTermsChecked] = useState(false);
@@ -37,15 +37,7 @@ const Batchdetails = () => {
       } else if (batch.noofjoins >= maxStudents) {
         alert("This batch is already full.");
       } else {
-        dispatch(
-          postjoin({
-            id,
-            noofjoins: batch.noofjoins + 1,
-            userjoined: user.result.name,
-            userid: user.result._id,
-          })
-        );
-        setTermsChecked(false);
+        navigate('/payment'); // Redirect to payment page
       }
     }
   };

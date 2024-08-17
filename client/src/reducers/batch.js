@@ -4,8 +4,13 @@ const batchreducer = (state = { data: null }, action) => {
             return { ...state, data: [...state.data, action.payload] };
         case "FETCH_ALL_BATCHES":
             return { ...state, data: action.payload };
-        case "POST_ANSWER":
-            return { ...state };
+        case "UPDATE_BATCH":
+            return {
+                ...state,
+                data: state.data.map((batch) =>
+                    batch._id === action.payload._id ? action.payload : batch
+                ),
+            };
         default:
             return state;
     }
