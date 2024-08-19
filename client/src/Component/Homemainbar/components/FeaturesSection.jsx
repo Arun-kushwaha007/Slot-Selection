@@ -27,7 +27,7 @@ function FeatureSection() {
   ];
 
   return (
-    <section className="flex overflow-hidden overflow-x-auto gap-10 px-20 py-6 text-center bg-white rounded-md shadow-[0px_1px_8px_rgba(0,0,0,0.08)] text-neutral-800 max-md:px-5">
+    <section className="flex z-10 my-[-80px] relative justify-center max-w-[85%] mx-auto overflow-hidden overflow-x-auto gap-10 px-20 py-6 text-center bg-white rounded-md shadow-[0px_1px_8px_rgba(0,0,0,0.08)] text-neutral-800 max-md:px-5">
       {features.map((feature, index) => (
         <React.Fragment key={index}>
           <FeatureCard

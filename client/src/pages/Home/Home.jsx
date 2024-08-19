@@ -8,7 +8,7 @@ const Home = ({slidein}) => {
   return (
     <div className="home-container-1">
       {/* <Leftsidebar slidein={slidein}/> */}
-      <div className="home-container-2">
+      <div className="home-container-3">
         <Homemainbar/>
         <Rightsidebar/>
       </div>

@@ -29,11 +29,11 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="flex flex-col items-start px-16 pt-7 pb-36 border-b-2 bg-stone-50 border-zinc-200 max-md:px-5 max-md:pb-24">
+    <footer className="flex flex-col items-start justify-around px-16 pt-7 pb-36 border-b-2 bg-stone-50 border-zinc-200 max-md:px-5 max-md:pb-24">
       <div className="flex flex-wrap gap-5 justify-between items-start w-full max-w-[1065px] max-md:max-w-full">
         <div className="flex flex-col items-start max-md:max-w-full">
           <CompanyLogo />
-          <p className="self-stretch mt-3.5 text-sm font-medium leading-5 text-neutral-700 max-md:max-w-full">
+          <p className="self-stretch mt-3 text-sm font-medium leading-5 text-neutral-700 max-md:max-w-full">
             We understand that every student has different needs and capabilities,
             <br /> which is why we create such a wonderful and unique curriculum that is the
             <br /> best fit for every student.
@@ -51,7 +51,7 @@ const Footer = () => {
         <FooterColumn title="Connect With Us" links={connectLinks} />
         <FooterColumn title="Our Centres" links={centreLinks} />
         <FooterColumn title="Quick Links" links={quickLinks} />
-        <FooterColumn title="Popular Exams" links={examLinks} />
+        <FooterColumn title="Popular Exams" links={examLinks}   />
         <FooterColumn title="Our Products" links={productLinks} />
       </div>
     </footer>

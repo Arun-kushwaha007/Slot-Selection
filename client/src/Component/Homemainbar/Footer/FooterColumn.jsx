@@ -10,7 +10,7 @@ const FooterColumn = ({ title, links }) => {
         <a
           key={index}
           href="#"
-          className="mt-5 leading-loose"
+          className="mt-2 "
         >
           {link}
         </a>
