@@ -11,6 +11,7 @@ import Users from './pages/Users/Users';
 import Userprofile from './pages/Userprofile/Userprofile';
 import Mentors from './pages/Users/Mentors';
 import Payment from './pages/Payment/Payment';
+import Resources from './pages/Resources/Resources';
 
 function Allroutes({ slidein, handleslidein }) {
   return (
@@ -26,6 +27,7 @@ function Allroutes({ slidein, handleslidein }) {
 
         <Route path='/Users' element={<Users slidein={slidein} handleslidein={handleslidein}/>}/>
         <Route path='/Mentors' element={<Mentors slidein={slidein} handleslidein={handleslidein}/>}/>
+        <Route path='/Resources' element={<Resources slidein={slidein} handleslidein={handleslidein}/>}/>
 
         <Route path='/Users/:id' element={<Userprofile slidein={slidein} handleslidein={handleslidein}/>}/>
         <Route path='/payment' element={<Payment />}/>

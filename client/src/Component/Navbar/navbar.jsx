@@ -70,7 +70,7 @@ function Navbar({ handleslidein }) {
                     <NavLink to="/Batch" className="nav-item nav-btn res-nav" activeClassName="active">
                         Booking
                     </NavLink>
-                    <NavLink to="/Mentors" className="nav-item nav-btn res-nav" activeClassName="active">
+                    <NavLink to="/Resources" className="nav-item nav-btn res-nav" activeClassName="active">
                         Resources
                     </NavLink>
                     <NavLink to="/Mentors" className="nav-item nav-btn res-nav" activeClassName="active">
