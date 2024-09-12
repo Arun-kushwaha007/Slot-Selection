@@ -25,7 +25,7 @@ const ImageSlider = () => {
   useEffect(() => {
     const id = setInterval(() => {
       changeSlide();
-    }, 3000);
+    }, 5000);
     setIntervalId(id);
     return () => clearInterval(id);
   }, [currentImg]);
@@ -80,17 +80,19 @@ const styles = {
   slider: {
     width: "100%",
     height: "510px",
-    position: "relative"
-  },
-  image: {
+    position: "relative",
+},
+image: {
     width: "100%",
     height: "500px",
     position: "absolute",
     top: 0,
     left: 0,
     transition: "opacity 0.5s ease-in-out"
-  },
-  navigationButton: {
+},
+navigationButton: {
+      backgroundColor : "#EBEEFF",
+    //   color:"white",
     textAlign: "center",
     position: "relative"
   },
@@ -99,7 +101,7 @@ const styles = {
     height: "15px",
     width: "15px",
     margin: "0 2px",
-    backgroundColor: "#bbb",
+    backgroundColor: "#EBEEFF",
     borderRadius: "50%",
     display: "inline-block"
   }
