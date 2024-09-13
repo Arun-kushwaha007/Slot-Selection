@@ -76,6 +76,8 @@ const Resources = () => {
       <section className="my-20">
         {activeSection === 'previous-questions' && (
           <div id="previous-questions">
+            <h2 className="text-2xl font-bold">Previous Asked Questions</h2>
+            <p>This section contains the previously asked questions...</p>
             <Pyq/>
           </div>
         )}
