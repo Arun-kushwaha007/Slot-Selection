@@ -74,6 +74,9 @@ function Navbar({ handleslidein }) {
                         Resources
                     </NavLink>
                     <NavLink to="/Mentors" className="nav-item nav-btn res-nav" activeClassName="active">
+                        Mentor
+                    </NavLink>
+                    <NavLink to="/Contact" className="nav-item nav-btn res-nav" activeClassName="active">
                         Contact Us
                     </NavLink>
                     {/* <GoogleLoginButton /> */}

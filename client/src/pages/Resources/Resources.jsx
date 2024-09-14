@@ -75,9 +75,9 @@ const Resources = () => {
       {/* Conditionally Rendered Sections */}
       <section className="my-20">
         {activeSection === 'previous-questions' && (
-          <div id="previous-questions">
-            <h2 className="text-2xl font-bold">Previous Asked Questions</h2>
-            <p>This section contains the previously asked questions...</p>
+          <div id="previous-questions" className=''>
+            <h2 className="text-2xl font-bold mx-2">Previous Asked Questions</h2>
+            <p className='mx-2'>This section contains the previously asked questions...</p>
             <Pyq/>
           </div>
         )}
