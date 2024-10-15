@@ -33,12 +33,12 @@ function NDACoaching() {
                     be provided wiht the top NDA faculty <br />
                     videos.
                   </div>
-                  {[1, 2].map((index) => (
+                  {/* {[1, 2].map((index) => (
                     <div
                       key={index}
                       className="flex shrink-0 bg-amber-500 md:mx-[-70px] sm:mx-10 mt-1 rounded-md h-[30px] shadow-[0px_0px_8px_rgba(0,0,0,0.08)] w-[222px]"
                     />
-                  ))}
+                  ))} */}
                 </div>
               </div>
             </div>
