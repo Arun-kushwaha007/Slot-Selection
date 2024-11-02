@@ -10,7 +10,7 @@ const Home = ({slidein}) => {
       {/* <Leftsidebar slidein={slidein}/> */}
       <div className="home-container-3">
         <Homemainbar/>
-        <Rightsidebar/>
+        {/* <Rightsidebar/> */}
       </div>
     </div>
   )

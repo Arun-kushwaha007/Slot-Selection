@@ -30,9 +30,9 @@ const Batch = ({slidein}) => {
     //   {/* <Leftsidebar slidein={slidein}/> */}
     //   <div className="home-container-2">
     //     {/* <Homemainbar/> */}
-    <div className="main-bar mb-11  flex flex-col justify-center  items-center">
+    <div className=" mt-6 mb-11  flex flex-col justify-center  items-center">
 
-      <div className="heading bg-[#FF9900] mt-6 ">
+      <div className=" bg-[#FF9900] mt-6 ">
         <div className="flex flex-col justify-center  text-white p-5 pl-20 ">
 
         <h1 className='font-bold text-3xl '>ONGOING BATCHES FOR NDA..</h1>
@@ -62,12 +62,12 @@ const Batch = ({slidein}) => {
             <BatchList batchlist={batchlist.data} />
           </>
         )}
-        <Footer/>
       </div>
+      <Footer/>
     {/* </div>
 
-        <Rightsidebar/> */}
-    //   </div>
+<Rightsidebar/> */}
+  </div>
     // </div>
   )
 }

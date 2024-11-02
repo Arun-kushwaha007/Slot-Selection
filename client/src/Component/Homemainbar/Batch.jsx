@@ -17,7 +17,7 @@ const Batch = ({ batch = {} }) => {
   } = batch;
 
   return (
-    <div className="bg-white shadow-lg w-full lg:w-[1000px]  rounded-lg p-6 mb-6 transition-transform hover:scale-105 flex">
+    <div className="bg-white shadow-lg w-full lg:w-[1400px]  rounded-lg p-6 mb-6 transition-transform hover:scale-105 flex">
       {/* Image Container Section */}
       <div className="w-1/4 pr-4">
         <div className="relative w-full h-32 overflow-hidden rounded-lg bg-gray-200">

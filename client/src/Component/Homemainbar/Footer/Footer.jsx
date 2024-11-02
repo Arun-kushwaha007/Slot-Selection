@@ -29,7 +29,7 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="flex flex-col items-start justify-around px-16 pt-7 pb-36 border-b-2 bg-stone-50 border-zinc-200 max-md:px-5 max-md:pb-24">
+    <footer className="flex flex-col items-start justify-around px-16 pt-7 pb-36 border-b-2 bg-stone-50 border-zinc-200 max-md:px-5 max-md:pb-24 w-full">
       <div className="flex flex-wrap gap-5 justify-between items-start w-full max-w-[1065px] max-md:max-w-full">
         <div className="flex flex-col items-start max-md:max-w-full">
           <CompanyLogo />

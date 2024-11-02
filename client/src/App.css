@@ -3,6 +3,10 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+*{
+  margin: 0;
+  padding: 0;
+}
 
 .home-container-1 {
   min-height: 100vh;
@@ -11,6 +15,7 @@
   display: flex;
   justify-content: center;
   margin: 0% auto;
+  background-color: white;
 }
 
 .home-container-2 {
@@ -22,7 +27,7 @@
 }
 .home-container-3 {
   /* max-width: 1700px; */
-  /* width: calc(100% - 164px); */
+  width: calc(100%);
   /* padding: 24px; */
   box-sizing: border-box;
   background-color: white;
