@@ -3,6 +3,7 @@ import Leftsidebar from '../../Component/Leftsidebar/Leftsidebar'
 import Rightsidebar from '../../Component/Rightsidebar/Rightsidebar'
 import Homemainbar from '../../Component/Homemainbar/Homemainbar'
 import '../../App.css'
+import Footer from '../../Component/Homemainbar/Footer/Footer'
 import { useLocation, useNavigate } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 
@@ -61,6 +62,7 @@ const Batch = ({slidein}) => {
             <BatchList batchlist={batchlist.data} />
           </>
         )}
+        <Footer/>
       </div>
     {/* </div>
 

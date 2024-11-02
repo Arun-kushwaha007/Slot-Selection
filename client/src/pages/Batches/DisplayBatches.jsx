@@ -4,11 +4,11 @@ import Rightsidebar from '../../Component/Rightsidebar/Rightsidebar'
 import Batchdetails from './Batchdetails'
 const DisplayBatches = ({slidein}) => {
   return (
-    <div className="home-container-1">
-      <Leftsidebar slidein={slidein}/>
-      <div className="home-container-2">
+    <div className="sd">
+      {/* <Leftsidebar slidein={slidein}/> */}
+      <div className="home">
         <Batchdetails/>
-        <Rightsidebar/>
+        {/* <Rightsidebar/> */}
       </div>
     </div>
   )

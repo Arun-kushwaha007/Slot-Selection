@@ -1,6 +1,6 @@
 .batch-details-page {
-  width: calc(100% - 300px - 24px);
-  float: left;
+  /* width: calc(100% - 300px - 24px); */
+  /* float: left; */
   margin: 35px 10px;
   padding: 0px;
 }
