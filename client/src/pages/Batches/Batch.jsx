@@ -24,12 +24,25 @@ const Batch = ({slidein}) => {
     }
   };
   return (
-    <div className="home-container-1">
-      {/* <Leftsidebar slidein={slidein}/> */}
-      <div className="home-container-2">
-        {/* <Homemainbar/> */}
-    <div className="main-bar">
-      <div className="main-bar-header">
+  
+    // <div className="home-container-1">
+    //   {/* <Leftsidebar slidein={slidein}/> */}
+    //   <div className="home-container-2">
+    //     {/* <Homemainbar/> */}
+    <div className="main-bar mb-11  flex flex-col justify-center  items-center">
+
+      <div className="heading bg-[#FF9900] mt-6 ">
+        <div className="flex flex-col justify-center  text-white p-5 pl-20 ">
+
+        <h1 className='font-bold text-3xl '>ONGOING BATCHES FOR NDA..</h1>
+        <p className='text-white text-[17px]'>we provide you with one of the best online coaching , video lecture for all the students preparing for nda along with all the neccessary things 
+        required for the preparation , all time support etc. So become the part to make most out of you in upcoming exams.</p>
+
+        </div>
+
+        </div>  
+    
+      <div className="main-bar-header mt-11">
         {location.pathname === "/" ? (
           <h1>Top Batches</h1>
         ) : (
@@ -49,11 +62,11 @@ const Batch = ({slidein}) => {
           </>
         )}
       </div>
-    </div>
+    {/* </div>
 
-        <Rightsidebar/>
-      </div>
-    </div>
+        <Rightsidebar/> */}
+    //   </div>
+    // </div>
   )
 }
 

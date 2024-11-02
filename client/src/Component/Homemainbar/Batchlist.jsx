@@ -1,14 +1,14 @@
-import React from 'react'
-import Batch from './Batch'
-function Batchlist({batchlist}) {
-  // console.log(batchlist)
+import React from 'react';
+import Batch from './Batch'; // Import Batch
+
+function Batchlist({ batchlist = [] }) {
   return (
     <>
-    {batchlist.map((batch)=>(
-      <Batch batch={batch} key ={batch._id}/>
-    ))}
+      {batchlist.map((batch) => (
+        <Batch batch={batch} key={batch._id} />
+      ))}
     </>
-  )
+  );
 }
 
-export default Batchlist
+export default Batchlist;
