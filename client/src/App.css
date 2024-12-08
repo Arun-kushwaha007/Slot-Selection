@@ -1,40 +1,37 @@
-
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-*{
+
+* {
   margin: 0;
   padding: 0;
 }
 
 .home-container-1 {
   min-height: 100vh;
-  /* max-width: 1250px; */
-  width: 100%;
+  width: 100%; /* Use full width for all screen sizes */
   display: flex;
   justify-content: center;
-  margin: 0% auto;
-  background-color: white;
+  margin: 0 auto;
+  background-color: black;
 }
 
 .home-container-2 {
-  max-width: 1100px;
-  width: calc(100% - 164px);
+  max-width: 100%; /* Ensure it always spans the full screen */
+  width: 100%;
   padding: 24px;
   box-sizing: border-box;
-  /* background-color: white; */
 }
+
 .home-container-3 {
-  /* max-width: 1700px; */
-  width: calc(100%);
-  /* padding: 24px; */
+  max-width: 100%; /* Ensure full width for all screens */
+  width: 100%;
   box-sizing: border-box;
   background-color: white;
 }
+
 @media screen and (max-width: 760px) {
   .home-container-2 {
-    max-width: 100%;
-    width: 100%;
+    padding: 16px; /* Slightly reduce padding for smaller screens */
   }
 }

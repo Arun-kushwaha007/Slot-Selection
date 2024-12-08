@@ -44,7 +44,7 @@ const ImageSlider = () => {
   };
 
   return (
-    <div>
+    <>
       <div className="slider" style={styles.slider}>
         {imgs.map((img, index) => (
           <img
@@ -72,13 +72,13 @@ const ImageSlider = () => {
           />
         ))}
       </div>
-    </div>
+    </>
   );
 };
 
 const styles = {
   slider: {
-    width: "100%",
+    width: "100vw",
     height: "510px",
     position: "relative",
 },
