@@ -1,11 +1,9 @@
 import axios from "axios";
 
-const API = axios.create({ baseURL: 
-  // "http://localhost:5000" 
-  "https://slot-selection.onrender.com"
-});
+// Create an axios instance with the backend base URL
+const API = axios.create({ baseURL: "https://slot-selection.onrender.com" });
 
-
+// Add the Authorization token to the headers for protected routes
 API.interceptors.request.use((req) => {
   const profile = localStorage.getItem('Profile') || localStorage.getItem('ProfileMentor');
   if (profile) {
@@ -14,8 +12,7 @@ API.interceptors.request.use((req) => {
   return req;
 });
 
-
-// export const login = (authdata) => API.post("user/login", authdata);
+// Define API methods
 export const signup = (authdata) => API.post("user/signup", authdata);
 export const getallusers = () => API.get("/user/getallusers");
 
