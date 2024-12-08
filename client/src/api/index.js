@@ -1,21 +1,19 @@
 import axios from "axios";
 
-// Create an axios instance with the backend base URL
-const API = axios.create({ baseURL: "https://slot-selection.onrender.com" });
+const API = axios.create({
+  baseURL: "https://slot-selection.onrender.com", // Use your backend deployed URL here
+});
 
-// Add the Authorization token to the headers for protected routes
 API.interceptors.request.use((req) => {
   const profile = localStorage.getItem('Profile') || localStorage.getItem('ProfileMentor');
   if (profile) {
-      req.headers.Authorization = `Bearer ${JSON.parse(profile).token}`;
+    req.headers.Authorization = `Bearer ${JSON.parse(profile).token}`;
   }
   return req;
 });
 
-// Define API methods
 export const signup = (authdata) => API.post("user/signup", authdata);
 export const getallusers = () => API.get("/user/getallusers");
-
 export const mentorsignup = (authData) => API.post('/mentor/mentorsignup', authData);
 export const mentorlogin = (authData) => API.post('/mentor/mentorlogin', authData);
 export const getallmentor = () => API.get("/mentor/getallmentor");
