@@ -17,8 +17,9 @@ app.use(express.urlencoded({ limit: "30mb", extended: true }));
 
 // CORS Configuration
 const allowedOrigins = [
-  "http://localhost:3000", // Local frontend URL for development
-  "https://slot-selection.vercel.app" // Deployed frontend URL on Vercel
+    "https://slot-selection.vercel.app" ,
+//   "http://localhost:3000" // Local frontend URL for development
+  // Deployed frontend URL on Vercel
 ];
 
 app.use(cors({
