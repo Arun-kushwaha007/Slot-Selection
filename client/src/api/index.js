@@ -2,7 +2,7 @@ import axios from "axios";
 
 // Base URL configuration
 const API = axios.create({
-  baseURL: "https://slot-selection.onrender.com", // Update if deploying to another domain
+  baseURL: "https://slot-selection.onrender.com", // Backend hosted on Render
   withCredentials: true,  // Ensure credentials (cookies, authorization headers) are included
 });
 
