@@ -21,7 +21,8 @@ const Batchdetails = () => {
   const user = useSelector((state) => state.currentuserreducer);
   const location = useLocation();
   const navigate = useNavigate();
-  const url = "http://localhost:5000/";
+  // const url = "http://localhost:5000/";
+  const url = "https://slot-selection-final.onrender.com";
   // const url = "https://slot-selection.onrender.com";
 
   const hasJoinedBatch = (batch) => {
