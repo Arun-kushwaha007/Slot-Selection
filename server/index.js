@@ -2,47 +2,49 @@ import express from "express";
 import mongoose from "mongoose";
 import cors from "cors";
 import dotenv from "dotenv";
+import path from "path";
+import { fileURLToPath } from "url";
+
+// Handle __dirname in ES modules
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+// Load env vars
+dotenv.config({ path: path.resolve(__dirname, "../.env") });
+
+// Import routes
 import userRoutes from "./routes/user.js";
 import batchRoutes from "./routes/batch.js";
 import joinRoutes from "./routes/join.js";
 import mentorRoutes from "./routes/mentor.js";
-// import PATCH from 'path';
-import path from "path";
-
-
-dotenv.config();
 
 const app = express();
 
-// Middleware
+// Middleware for JSON parsing
 app.use(express.json({ limit: "30mb", extended: true }));
 app.use(express.urlencoded({ limit: "30mb", extended: true }));
 
-// CORS Configuration
+// ✅ Improved CORS handling
 const allowedOrigins = [
-    // "https://slot-selection.vercel.app" ,
-     "https://slot-selection-final.onrender.com" ,
-  // "http://localhost:3000",
-  "http://localhost:5000" // Local frontend URL for development
-  // Deployed frontend URL on Vercel
+  "http://localhost:3000",
+  "http://localhost:5000",
+  "https://slot-selection-final.onrender.com",
+  "https://slot-selection.vercel.app"
 ];
 
 app.use(cors({
   origin: (origin, callback) => {
-    // Allow requests with no origin (e.g., mobile apps or Postman)
     if (!origin || allowedOrigins.includes(origin)) {
       callback(null, true);
     } else {
-      callback(new Error("Not allowed by CORS"));
+      console.error("❌ CORS blocked origin:", origin);
+      callback(new Error("Not allowed by CORS: " + origin));
     }
   },
   methods: ["GET", "POST", "PUT", "DELETE", "PATCH"],
   allowedHeaders: ["Content-Type", "Authorization"],
-  credentials: true, // Allow credentials (cookies, authorization headers, etc.)
+  credentials: true
 }));
-
-
-  const _dirname = path.resolve();
 
 // Routes
 app.use("/user", userRoutes);
@@ -50,28 +52,32 @@ app.use("/mentor", mentorRoutes);
 app.use("/batches", batchRoutes);
 app.use("/join", joinRoutes);
 
-// Health Check Endpoint
-// app.get("/", (req, res) => {
-//   res.send("Codequest is running perfectly");
-// });
+// ✅ Serve static files (React frontend)
+app.use(express.static(path.join(__dirname, "../client/build")));
 
-// Error Handling Middleware
+app.get("*", (req, res) => {
+  res.sendFile(path.resolve(__dirname, "../client", "build", "index.html"));
+});
+
+// ✅ Global error handler
 app.use((err, req, res, next) => {
-  console.error(err.stack);
+  console.error("❌ Internal Server Error:", err.stack);
   res.status(500).json({ message: "Internal Server Error" });
 });
 
-app.use(express.static(path.join(_dirname, "/client/build")))
-app.get('*', (req,res)=>{
-  res.sendFile(path.resolve(_dirname,"client" , "build", "index.html"));
-})
-
-// Database and Server Initialization
+// ✅ Connect to database and start server
 const PORT = process.env.PORT || 5000;
 const databaseURL = process.env.MONGODB_URL;
 
+// Debug log
+console.log("📦 Connecting to:", databaseURL);
 
-
-mongoose.connect(databaseURL, { useNewUrlParser: true, useUnifiedTopology: true })
-  .then(() => app.listen(PORT, () => console.log(`Server running on port ${PORT}`)))
-  .catch(err => console.log(`Database connection error: ${err.message}`));
+mongoose.connect(databaseURL)
+  .then(() => {
+    app.listen(PORT, () => {
+      console.log(`✅ Server running on port ${PORT}`);
+    });
+  })
+  .catch(err => {
+    console.error("❌ Database connection error:", err.message);
+  });
